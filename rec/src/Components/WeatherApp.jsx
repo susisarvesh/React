@@ -26,9 +26,9 @@ function WeatherApp() {
 
     return (
         <div>
-            <h3 className="text-[30px] font-thin">Weather App: [useEffect, useState]</h3>
+            <h3 className="text-[30px] font-thin">Weather App: [useEffect, useState , AsyncAwait , Api]</h3>
             {error && <p className="text-red-500">{error}</p>}
-            <div className='grid grid-cols-4'>
+            <div className='grid grid-cols-1 lg:grid-cols-6'>
                 {weather.length > 0 ? (
                     weather.map((ele, index) => (
                         <div key={index} className="border p-2 m-2 rounded-md bg-slate-100">
