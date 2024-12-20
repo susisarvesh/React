@@ -9,6 +9,7 @@ import RandomQuote from './Components/RandomQuote'
 import MineSarvs from './Components/MineSarvs'
 import ImageGallery from './Components/ImageGallery'
 import Recipie from './Components/Recipie'
+import Quiz from './Components/Quiz'
 
 function App() {
 const Cities = [
@@ -38,14 +39,15 @@ const Cities = [
   return (
     <>
       <div className='p-8'>
-        <MineSarvs></MineSarvs>
-       {/* <Todo></Todo>
+        {/* <MineSarvs></MineSarvs>
+       <Todo></Todo>
         <Calculator></Calculator>
         <WeatherApp></WeatherApp>
         <Clock></Clock>
-        <RandomQuote></RandomQuote> */}
-        {/* <ImageGallery arr={Cities}></ImageGallery> */}
-        <Recipie />
+        <RandomQuote></RandomQuote>
+        <ImageGallery arr={Cities}></ImageGallery>
+        <Recipie /> */}
+        <Quiz />
 
         </div>
     </>
