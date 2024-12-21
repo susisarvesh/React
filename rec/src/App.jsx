@@ -39,14 +39,16 @@ const Cities = [
   return (
     <>
       <div className='p-8'>
-        {/* <MineSarvs></MineSarvs>
+        
+        <MineSarvs></MineSarvs>
+        
        <Todo></Todo>
         <Calculator></Calculator>
         <WeatherApp></WeatherApp>
         <Clock></Clock>
         <RandomQuote></RandomQuote>
         <ImageGallery arr={Cities}></ImageGallery>
-        <Recipie /> */}
+        <Recipie />
         <Quiz />
 
         </div>
