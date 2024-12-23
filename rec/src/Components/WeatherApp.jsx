@@ -26,7 +26,7 @@ function WeatherApp() {
 
     return (
         <div>
-            <h3 className="text-[30px] font-thin">Weather App: [useEffect, useState , AsyncAwait , Api]</h3>
+            <h3 className="text-[30px] font-thin mb-10 mt-10">Weather App: [useEffect, useState , AsyncAwait , Api]</h3>
             {error && <p className="text-red-500">{error}</p>}
             <div className='grid grid-cols-1 lg:grid-cols-6'>
                 {weather.length > 0 ? (

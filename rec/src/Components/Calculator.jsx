@@ -26,7 +26,7 @@ function Calculator() {
 
   return (
     <div>
-      <h3 className="text-[30px] font-thin">Calculator:[useState , Eval , List Rendering]</h3>
+      <h3 className="text-[30px] font-thin mb-10 mt-10">Calculator:[useState , Eval , List Rendering]</h3>
           <h2 className="text-[30px] m-1">{input||"0"}</h2>
       {buttons.map((row, rowIndex) => (
         <div key={rowIndex} className="flex m-1">

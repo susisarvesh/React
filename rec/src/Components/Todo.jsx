@@ -14,7 +14,7 @@ function Todo() {
     }
   return (
       <div>
-          <h3 className="text-[30px] font-thin">To Do List:[useState , List Rendering , Filtering]</h3>
+          <h3 className="text-[30px] font-thin mb-10 mt-10">To Do List:[useState , List Rendering , Filtering]</h3>
           <div className="flex items-center mt-5">
           <input type="text" value={value} onChange={(e) => setValue(e.target.value)} className="border-blue-400 bg-slate-200 rounded-lg w-[250px] h-[40px] p-3 font-mono" />
           <button className="text-[18px] ml-[10px] bg-slate-500 hover:bg-slate-800 p-2 font-mono text-white rounded-md" onClick={handleClick}>Add</button>

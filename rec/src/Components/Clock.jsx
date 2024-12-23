@@ -29,7 +29,7 @@ function Clock() {
   return (
       <div>
            <div>
-            <h3 className="text-[30px] font-thin">Clock: [useState, useEffect , SetInterval]</h3>
+            <h3 className="text-[30px] font-thin mb-10 mt-10">Clock: [useState, useEffect , SetInterval]</h3>
             <div>
                 <span className='text-[40px] font-mono text-purple-600'>{hrs}:{mins < 10 ? '0' + mins : mins}:{secs < 10 ? '0' + secs : secs} {ampm}</span>
             </div>

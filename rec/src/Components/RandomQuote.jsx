@@ -34,7 +34,7 @@ function RandomQuote() {
 
     return (
         <div>
-            <h3 className="text-[30px] font-thin">RandomQuote: [useState , useEffect , Random , Api]</h3>
+            <h3 className="text-[30px] font-thin mb-10 mt-10">RandomQuote: [useState , useEffect , Random , Api]</h3>
             <div className='mt-5'>
                 {show && (
                     <>

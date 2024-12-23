@@ -20,8 +20,8 @@ function Recipie() {
 });
 
   return (
-    <div className="p-4 bg-gray-50 min-h-screen">
-      <h3 className="text-[30px] font-thin text-center">
+    <div className="p-4 bg-gray-50 min-h-screen ">
+      <h3 className="text-[30px] font-thin text-center mb-10 mt-10">
         Recipe App: [useState, useEffect, API, Filtering]
       </h3>
       <div className="flex items-center justify-center mb-4">

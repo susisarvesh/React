@@ -91,7 +91,7 @@ function Quiz() {
   };
 
   return (<>
-    <h3 className="text-[30px] font-thin">Quiz App:[useState , List Rendering , Condition Checking]</h3>
+    <h3 className="text-[30px] font-thin mb-10 mt-10">Quiz App:[useState , List Rendering , Condition Checking]</h3>
     <div className="min-h-screen flex items-center justify-center bg-slate-100 text-white font-sans">
     
       

@@ -10,6 +10,9 @@ import MineSarvs from './Components/MineSarvs'
 import ImageGallery from './Components/ImageGallery'
 import Recipie from './Components/Recipie'
 import Quiz from './Components/Quiz'
+import ExpenseTracker from './Intermediate/ExpenseTracker'
+import Practice from './Intermediate/useReducer/Practice'
+import CoinuseReducer from './Intermediate/useReducer/CoinuseReducer'
 
 function App() {
 const Cities = [
@@ -50,6 +53,10 @@ const Cities = [
         <ImageGallery arr={Cities}></ImageGallery>
         <Recipie />
         <Quiz />
+         {/* <Practice></Practice> */}
+        <ExpenseTracker />
+       
+        <CoinuseReducer></CoinuseReducer>
 
         </div>
     </>
