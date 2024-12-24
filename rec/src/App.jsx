@@ -13,6 +13,7 @@ import Quiz from './Components/Quiz'
 import ExpenseTracker from './Intermediate/ExpenseTracker'
 import Practice from './Intermediate/useReducer/Practice'
 import CoinuseReducer from './Intermediate/useReducer/CoinuseReducer'
+import MarkDownPreview from './Intermediate/MarkDownPreview'
 
 function App() {
 const Cities = [
@@ -44,7 +45,7 @@ const Cities = [
       <div className='p-8'>
         
         <MineSarvs></MineSarvs>
-        
+{/*         
        <Todo></Todo>
         <Calculator></Calculator>
         <WeatherApp></WeatherApp>
@@ -53,10 +54,11 @@ const Cities = [
         <ImageGallery arr={Cities}></ImageGallery>
         <Recipie />
         <Quiz />
-         {/* <Practice></Practice> */}
+         <Practice></Practice>
         <ExpenseTracker />
        
-        <CoinuseReducer></CoinuseReducer>
+        <CoinuseReducer></CoinuseReducer> */}
+        <MarkDownPreview />
 
         </div>
     </>
