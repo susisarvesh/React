@@ -15,6 +15,7 @@ import Practice from './Intermediate/useReducer/Practice'
 import CoinuseReducer from './Intermediate/useReducer/CoinuseReducer'
 import MarkDownPreview from './Intermediate/MarkDownPreview'
 import ReactForms from './Intermediate/ReactForms'
+import Routing from './Intermediate/Routing'
 
 function App() {
 const Cities = [
@@ -46,8 +47,8 @@ const Cities = [
       <div className='p-8'>
         
         <MineSarvs></MineSarvs>
-{/*         
-       <Todo></Todo>
+        
+       {/* <Todo></Todo>
         <Calculator></Calculator>
         <WeatherApp></WeatherApp>
         <Clock></Clock>
@@ -57,10 +58,11 @@ const Cities = [
         <Quiz />
          <Practice></Practice>
         <ExpenseTracker />
-       
-        <CoinuseReducer></CoinuseReducer> */}
-        {/* <MarkDownPreview /> */}
-          <ReactForms />
+        <CoinuseReducer></CoinuseReducer>
+        <MarkDownPreview />
+          <ReactForms /> */}
+        <Routing />
+        
          </div>
     </>
   )
