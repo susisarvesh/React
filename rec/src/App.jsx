@@ -14,6 +14,7 @@ import ExpenseTracker from './Intermediate/ExpenseTracker'
 import Practice from './Intermediate/useReducer/Practice'
 import CoinuseReducer from './Intermediate/useReducer/CoinuseReducer'
 import MarkDownPreview from './Intermediate/MarkDownPreview'
+import ReactForms from './Intermediate/ReactForms'
 
 function App() {
 const Cities = [
@@ -58,9 +59,9 @@ const Cities = [
         <ExpenseTracker />
        
         <CoinuseReducer></CoinuseReducer> */}
-        <MarkDownPreview />
-
-        </div>
+        {/* <MarkDownPreview /> */}
+          <ReactForms />
+         </div>
     </>
   )
 }

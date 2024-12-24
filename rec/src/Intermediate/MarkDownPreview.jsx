@@ -6,7 +6,7 @@ function MarkDownPreview() {
 
     return (
       <>
-                        <h3 className="text-[30px] font-thin mb-10 mt-10">MarkDown Previewer: [useState, ReactMarkdown]</h3>
+      <h3 className="text-[30px] font-thin mb-10 mt-10">MarkDown Previewer: [useState, ReactMarkdown]</h3>
 
       
     <div className="flex flex-col items-center p-4 bg-gray-100">
