@@ -27,8 +27,7 @@ function Routing() {
   return (
       <div>
                   <h3 className="text-[30px] font-thin mb-10 mt-10">Routing: [React-router-dom]</h3>
-
-      <div className="min-h-screen bg-gray-50">
+      <div className=" bg-gray-50">
         {/* Navigation Bar */}
         <header className="bg-blue-600 text-white py-4 shadow-lg">
           <div className="container mx-auto flex justify-between items-center">

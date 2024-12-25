@@ -2,7 +2,7 @@ import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 
 function MineSarvs() {
-  const count = 13;
+  const count = 16;
   return (
       <div className='flex items-center justify-between flex-col lg:flex-row mb-5'>
       <div className='flex items-center flex-col'>

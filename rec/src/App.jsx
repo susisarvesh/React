@@ -16,6 +16,8 @@ import CoinuseReducer from './Intermediate/useReducer/CoinuseReducer'
 import MarkDownPreview from './Intermediate/MarkDownPreview'
 import ReactForms from './Intermediate/ReactForms'
 import Routing from './Intermediate/Routing'
+import MovieRecommendation from './Intermediate/MovieRecommendation'
+import Dragdrop from './Intermediate/Dragdrop'
 
 function App() {
 const Cities = [
@@ -48,7 +50,7 @@ const Cities = [
         
         <MineSarvs></MineSarvs>
         
-       {/* <Todo></Todo>
+       <Todo></Todo>
         <Calculator></Calculator>
         <WeatherApp></WeatherApp>
         <Clock></Clock>
@@ -60,9 +62,10 @@ const Cities = [
         <ExpenseTracker />
         <CoinuseReducer></CoinuseReducer>
         <MarkDownPreview />
-          <ReactForms /> */}
+          <ReactForms />
         <Routing />
-        
+        <MovieRecommendation />
+        <Dragdrop />
          </div>
     </>
   )
