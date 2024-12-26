@@ -18,6 +18,11 @@ import ReactForms from './Intermediate/ReactForms'
 import Routing from './Intermediate/Routing'
 import MovieRecommendation from './Intermediate/MovieRecommendation'
 import Dragdrop from './Intermediate/Dragdrop'
+import DarkTheme from './Intermediate/DarkTheme'
+import Pagination from './Intermediate/Pagination'
+import Modal from './Intermediate/Modal'
+import ToolKit from './Intermediate/ToolKit'
+import { useState } from 'react'
 
 function App() {
 const Cities = [
@@ -43,14 +48,14 @@ const Cities = [
   "Kochi"
 ];
  
-
+  const [show, setShow] = useState(false)
   return (
     <>
       <div className='p-8'>
         
         <MineSarvs></MineSarvs>
         
-       <Todo></Todo>
+       {/* <Todo></Todo>
         <Calculator></Calculator>
         <WeatherApp></WeatherApp>
         <Clock></Clock>
@@ -66,7 +71,18 @@ const Cities = [
         <Routing />
         <MovieRecommendation />
         <Dragdrop />
-         </div>
+        <DarkTheme></DarkTheme>
+        <Pagination></Pagination> */}
+        <Modal></Modal>
+        {/* <ToolKit>
+          <>
+            <div>
+              <button className={`text-3xl text-center text-blue-500 mt-5 border border-slate-500 rounded-md p-2 hover:${setShow(true)}` visible={show}}>Hover Toolkit</button>
+          </div>
+          </>
+        </ToolKit> */}
+      </div>
+      
     </>
   )
 }
