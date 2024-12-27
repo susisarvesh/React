@@ -74,13 +74,14 @@ const Cities = [
         <DarkTheme></DarkTheme>
         <Pagination></Pagination> */}
         <Modal></Modal>
-        {/* <ToolKit>
+        <ToolKit visibility={show} >
           <>
             <div>
-              <button className={`text-3xl text-center text-blue-500 mt-5 border border-slate-500 rounded-md p-2 hover:${setShow(true)}` visible={show}}>Hover Toolkit</button>
+              <button className="p-2 mt-5 text-3xl text-center text-blue-500 border rounded-md border-slate-500"  onMouseEnter={() => setShow(true)}
+          onMouseLeave={() => setShow(false)} >Hover Toolkit</button>
           </div>
           </>
-        </ToolKit> */}
+        </ToolKit>
       </div>
       
     </>
