@@ -20,8 +20,8 @@ import DarkTheme from "./Intermediate/DarkTheme";
 import Pagination from "./Intermediate/Pagination";
 import Modal from "./Intermediate/Modal";
 import ToolKit from "./Intermediate/ToolKit";
+import ShoppingCart from "./Projects/ShoppingCart"
 import { useState } from "react";
-import Project from "./Projects/Project";
 
 function App() {
   const Cities = [
@@ -48,48 +48,40 @@ function App() {
   ];
 
   const [show, setShow] = useState(false);
+
   return (
-    <>
-      <div className="p-8">
-        <MineSarvs></MineSarvs>
-{/* 
-        <Todo></Todo>
-        <Calculator></Calculator>
-        <WeatherApp></WeatherApp>
-        <Clock></Clock>
-        <RandomQuote></RandomQuote>
-        <ImageGallery arr={Cities}></ImageGallery>
-        <Recipie />
-        <Quiz />
-        <Practice></Practice>
-        <ExpenseTracker />
-        <CoinuseReducer></CoinuseReducer>
-        <MarkDownPreview />
-        <ReactForms />
-        <Routing />
-        <MovieRecommendation />
-        <Dragdrop />
-        <DarkTheme></DarkTheme>
-        <Pagination></Pagination>
-        <Modal></Modal>
-        <ToolKit visibility={show}>
-          <>
-            <div>
-              <button
-                className="p-2 mt-5 text-3xl text-center text-blue-500 border rounded-md border-slate-500"
-                onMouseEnter={() => setShow(true)}
-                onMouseLeave={() => setShow(false)}
-              >
-                Hover Toolkit
-              </button>
-            </div>
-          </>
-        </ToolKit>
-         */}
-        <Project />
-        
-      </div>
-    </>
+    <div className="p-8">
+      <MineSarvs></MineSarvs>
+
+    
+      <Todo></Todo>
+      <Calculator></Calculator>
+      <WeatherApp></WeatherApp>
+      <Clock></Clock>
+      <RandomQuote></RandomQuote>
+      <ImageGallery arr={Cities}></ImageGallery>
+      <Recipie />
+      <Quiz />
+      <Practice></Practice>
+      <ExpenseTracker />
+      <CoinuseReducer></CoinuseReducer>
+      <MarkDownPreview />
+      <ReactForms />
+      <Routing />
+      <MovieRecommendation />
+      <Dragdrop />
+      <DarkTheme></DarkTheme>
+      <Pagination></Pagination>
+      <Modal></Modal>
+
+      {/* ToolKit example */}
+      <ToolKit>
+        <div>
+        <button onClick={() => setShow(true)}>Hover Toolkit</button>
+        </div>
+      </ToolKit>
+      <ShoppingCart></ShoppingCart>
+    </div>
   );
 }
 

@@ -5,10 +5,8 @@ function Modal() {
 
   return (
     <div>
-     <h3 className="text-[30px] font-thin mb-10 mt-10">Modal & ToolKit : [useState, Children]</h3>
-
       <button
-        className="p-2 border rounded-md border-slate-500 hover:bg-purple-600 hover:text-white"
+        className="border border-slate-500 p-2 rounded-md hover:bg-purple-600 hover:text-white"
         onClick={() => setShow((prev) => !prev)}
       >
         Show Modal
@@ -17,14 +15,14 @@ function Modal() {
       {show && (
         <>
          
-          <div className="fixed inset-0 z-40 bg-black opacity-50" onClick={() => setShow(false)}></div>
+          <div className="fixed inset-0 bg-black opacity-50 z-40" onClick={() => setShow(false)}></div>
 
      
-          <div className="fixed inset-0 z-50 flex items-center justify-center">
-            <div className="w-1/3 p-6 bg-white rounded-md shadow-lg">
-              <h2 className="mb-4 text-xl">This is the Content to be shown</h2>
+          <div className="fixed inset-0 flex justify-center items-center z-50">
+            <div className="bg-white p-6 rounded-md shadow-lg w-1/3">
+              <h2 className="text-xl mb-4">This is the Content to be shown</h2>
               <button
-                className="p-2 text-white bg-red-500 border rounded-md border-slate-500 hover:bg-red-600"
+                className="border border-slate-500 p-2 rounded-md bg-red-500 text-white hover:bg-red-600"
                 onClick={() => setShow(false)}
               >
                 Close Modal

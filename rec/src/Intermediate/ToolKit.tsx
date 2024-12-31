@@ -1,25 +1,23 @@
 import React, { ReactNode } from 'react';
 
-interface ToolKit {
+interface ToolKitProps {
   children: ReactNode;
-  visibility: boolean;
 }
 
-function ToolKit({ children, visibility }: ToolKit) {
+function ToolKit({ children }: ToolKitProps) {
   return (
-    <div className="p-4 mt-10 transition-all duration-300 bg-gray-100 border border-gray-300 rounded-lg shadow-md">
-     
-      <div
-        className={`mb-4 p-3 rounded-lg text-sm font-medium transition-opacity duration-300 ${
-          visibility
-            ? 'opacity-100 bg-blue-50 text-blue-700 border border-blue-300'
-            : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        Visibility Toolkit
-      </div>
-
-      <div className="p-3 bg-white rounded-lg shadow-sm">{children}</div>
+    <div
+      style={{
+        padding: '20px',
+        border: '2px solid #ddd',
+        borderRadius: '8px',
+        boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+        backgroundColor: '#f9f9f9',
+        marginTop: '20px',
+      }}
+    >
+      <h2 style={{ textAlign: 'center', marginBottom: '10px' }}>ToolKit</h2>
+      {children}
     </div>
   );
 }

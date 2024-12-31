@@ -28,11 +28,11 @@ function Pagination() {
 
     return (
         <>
-       <h3 className="text-[30px] font-thin mb-10 mt-10">Pagination : [useState, useEffect , Pagination , API]</h3>
+                                          <h3 className="text-[30px] font-thin mb-10 mt-10">Pagination : [useState, useEffect , Pagination , API]</h3>
 
     <div className="grid grid-cols-1 lg:grid-cols-3 ">
       {api.map((e, index) => (
-        <div key={index} className="p-3 m-2 border rounded-md border-slate-600">
+        <div key={index} className="border border-slate-600 m-2 p-3 rounded-md">
           <p>Comment: {e.body}</p>
           <p>Post ID: {e.postId}</p>
           <p>Likes: {e.likes}</p>

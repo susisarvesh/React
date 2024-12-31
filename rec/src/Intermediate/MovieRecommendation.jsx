@@ -39,26 +39,26 @@ function MovieRecommendation() {
         <>
                               <h3 className="text-[30px] font-thin mb-10 mt-10">Movie Reccomendation: [useState, useEffect , Dynamic Filtering , API]</h3>
 
-    <div className="bg-white min-h-screen text-black p-6">
+    <div className="min-h-screen p-6 text-black bg-white">
       
-      <h1 className="text-4xl font-bold text-center mb-6 animate-bounce">
+      <h1 className="mb-6 text-4xl font-bold text-center animate-bounce">
         Movie Search App 🎬
       </h1>
 
       
-      <div className="flex justify-center items-center mb-8">
+      <div className="flex items-center justify-center mb-8">
         <input
           type="text"
           placeholder="Search for a movie..."
-          className="w-full md:w-1/2 p-3 rounded-lg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+          className="w-full p-3 text-black border border-gray-700 rounded-lg md:w-1/2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           onChange={(e) => setMovienamefilter(e.target.value)}
         />
       </div>
 
      
-      {error && <p className="text-center text-red-500 mb-4">{error}</p>}
+      {error && <p className="mb-4 text-center text-red-500">{error}</p>}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {movies.map((movie) => (
           <div
             key={movie.imdbID}
@@ -67,9 +67,9 @@ function MovieRecommendation() {
             <img
               src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/150'}
               alt={movie.Title}
-              className="w-full h-64 object-cover rounded-lg mb-4"
+              className="object-cover w-full h-64 mb-4 rounded-lg"
             />
-            <h2 className="text-lg text-white font-semibold truncate">{movie.Title}</h2>
+            <h2 className="text-lg font-semibold text-white truncate">{movie.Title}</h2>
             <p className="text-sm text-gray-400">Year: {movie.Year}</p>
           </div>
         ))}
