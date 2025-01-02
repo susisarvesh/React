@@ -1,97 +1,110 @@
-import React, { useEffect, useState } from 'react';
-
-interface Product {
+import { div } from 'framer-motion/client';
+import React, { useEffect, useReducer, useState } from 'react';
+import ShoppingCart from './ShoppingCart';
+import { createContext } from 'react';
+interface StoreType {
   title: string;
-  price: number;
-  category: string;
   description: string;
-  image: string;
+  price: number;
+  images: string[];
+  category: { name: string };
 }
+interface Action { 
+  type: string;
+  payload?:StoreType
+}
+interface State { 
+  store:StoreType
+}
+const reducer = (state:State,action:Action) => { 
+  switch (action.type) {
+    case "ADD_ITEM":
+      return {
+          ...state,
+        cart: [...state.cart, action.payload],
+        
+      }
+  
+    default:
+      return state;
+  }
+}
+// interface ContextType {
+//   cart: any[];
+
+//  }
+
+export const ShoppingContext = createContext({ cart: [], dispatch: () => { } })
 
 function ShopApi() {
-  const [store, setStore] = useState<Product[]>([]);
-
-  useEffect(() => {
-    const storeFetch = async () => {
-      const req = await fetch('https://fakestoreapi.com/products');
+  const [store, setStore] = useState<StoreType[]>([]);
+  const [cart, dispatch] = useReducer(reducer, {
+    cart:[]
+  }) 
+  useEffect(() => { 
+    const fetchCartData = async () => {
+      const req = await fetch('https://api.escuelajs.co/api/v1/products');
       const data = await req.json();
-      setStore(data);
+      // console.log(data);
+      setStore(data.slice(0, 40)); // Limit to 40 products
     };
-    storeFetch();
+    fetchCartData();
   }, []);
+  const handleSend = (item:StoreType) => {
+  dispatch({
+    type: 'ADD_ITEM',
+    payload:item
+  });
+  };
+  // useEffect(() => { 
+  //   console.log(cart);
+    
+  // },[handleSend])
+
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', backgroundColor: '#f8f9fa' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '30px', color: '#343a40' }}>E-Commerce Store</h1>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-          gap: '20px',
-        }}
-      >
-        {store.map((product, index) => (
+    <>
+       <h3 className="text-[30px] font-thin mb-10 mt-10">Quiz App:[useState , useReducer , useContext , Condition Checking]</h3>
+    <div className="min-h-screen p-4 bg-gray-100">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {store.map((item, index) => (
           <div
             key={index}
-            style={{
-              backgroundColor: '#fff',
-              border: '1px solid #ddd',
-              borderRadius: '10px',
-              overflow: 'hidden',
-              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-              transition: 'transform 0.2s',
-            }}
+            className="overflow-hidden bg-white border border-gray-200 rounded-lg shadow-md"
           >
-            <img
-              src={product.image}
-              alt={product.title}
-              style={{
-                width: '100%',
-                height: '250px',
-                objectFit: 'cover',
-                borderBottom: '1px solid #ddd',
-              }}
-            />
-            <div style={{ padding: '15px', textAlign: 'center' }}>
-              <h2
-                style={{
-                  fontSize: '1.4em',
-                  marginBottom: '10px',
-                  color: '#343a40',
-                  textOverflow: 'ellipsis',
-                  overflow: 'hidden',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {product.title}
+            {item.images.slice(0, 1).map((image, imgIndex) => (
+              <img
+                key={imgIndex}
+                src={image}
+                alt={item.title}
+                className="object-cover w-full h-48"
+              />
+            ))}
+            <div className="p-4">
+              <h2 className="text-lg font-semibold text-gray-800 truncate">
+                {item.title}
               </h2>
-              <p style={{ color: '#6c757d', fontSize: '0.9em', marginBottom: '15px' }}>
-                Category: <strong>{product.category}</strong>
+              
+              <p className="mt-2 text-lg font-bold text-green-600">
+                ${item.price.toFixed(0)}
               </p>
-              <p style={{ fontSize: '1.2em', fontWeight: 'bold', marginBottom: '15px', color: '#007BFF' }}>
-                ${product.price.toFixed(2)}
+              <p className="mt-1 text-sm text-gray-500">
+                Category: {item.category?.name || 'N/A'}
               </p>
-              <button
-                style={{
-                  padding: '10px 20px',
-                  backgroundColor: '#007BFF',
-                  color: '#fff',
-                  border: 'none',
-                  borderRadius: '5px',
-                  cursor: 'pointer',
-                  fontSize: '1em',
-                  transition: 'background-color 0.2s',
-                }}
-                onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#0056b3')}
-                onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#007BFF')}
-              >
+            </div>
+            <div className="p-4">
+              <button className="w-full px-4 py-2 font-semibold text-white bg-blue-600 rounded-md hover:bg-blue-700" onClick={()=>handleSend(item)}>
                 Add to Cart
               </button>
             </div>
           </div>
         ))}
       </div>
-    </div>
+      </div>
+      <ShoppingContext.Provider value={{ cart:cart.cart, dispatch }}>
+        <ShoppingCart></ShoppingCart>
+      </ShoppingContext.Provider>
+      </>
   );
 }
 

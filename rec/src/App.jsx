@@ -22,6 +22,7 @@ import Modal from "./Intermediate/Modal";
 import ToolKit from "./Intermediate/ToolKit";
 import ShoppingCart from "./Projects/ShoppingCart"
 import { useState } from "react";
+import ShopApi from "./Projects/ShopApi";
 
 function App() {
   const Cities = [
@@ -53,7 +54,7 @@ function App() {
     <div className="p-8">
       <MineSarvs></MineSarvs>
 
-    
+{/*     
       <Todo></Todo>
       <Calculator></Calculator>
       <WeatherApp></WeatherApp>
@@ -74,13 +75,13 @@ function App() {
       <Pagination></Pagination>
       <Modal></Modal>
 
-      {/* ToolKit example */}
+     
       <ToolKit>
         <div>
         <button onClick={() => setShow(true)}>Hover Toolkit</button>
         </div>
-      </ToolKit>
-      <ShoppingCart></ShoppingCart>
+      </ToolKit> */}
+      <ShopApi></ShopApi>
     </div>
   );
 }
