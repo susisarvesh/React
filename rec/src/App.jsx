@@ -23,6 +23,7 @@ import ToolKit from "./Intermediate/ToolKit";
 import ShoppingCart from "./Projects/ShoppingCart"
 import { useState } from "react";
 import ShopApi from "./Projects/ShopApi";
+import Like from "./Projects/Reducer/Like";
 
 function App() {
   const Cities = [
@@ -74,14 +75,13 @@ function App() {
       <DarkTheme></DarkTheme>
       <Pagination></Pagination>
       <Modal></Modal>
-
-     
       <ToolKit>
         <div>
         <button onClick={() => setShow(true)}>Hover Toolkit</button>
         </div>
       </ToolKit> */}
-      <ShopApi></ShopApi>
+      {/* <ShopApi></ShopApi> */}
+      <Like></Like>
     </div>
   );
 }
