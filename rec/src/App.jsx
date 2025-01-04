@@ -23,7 +23,9 @@ import ToolKit from "./Intermediate/ToolKit";
 import ShoppingCart from "./Projects/ShoppingCart"
 import { useState } from "react";
 import ShopApi from "./Projects/ShopApi";
-import Like from "./Projects/Reducer/Like";
+import AddTask from "./Projects/AddTask";
+import ZustandCounter from "./Projects/ZustandCounter";
+
 
 function App() {
   const Cities = [
@@ -54,8 +56,8 @@ function App() {
   return (
     <div className="p-8">
       <MineSarvs></MineSarvs>
-
-{/*     
+{/* 
+    
       <Todo></Todo>
       <Calculator></Calculator>
       <WeatherApp></WeatherApp>
@@ -79,9 +81,12 @@ function App() {
         <div>
         <button onClick={() => setShow(true)}>Hover Toolkit</button>
         </div>
-      </ToolKit> */}
-      {/* <ShopApi></ShopApi> */}
-      <Like></Like>
+      </ToolKit>
+      <ShopApi></ShopApi>
+      <AddTask></AddTask>
+      <ZustandCounter></ZustandCounter>
+    */}
+      
     </div>
   );
 }
