@@ -25,6 +25,7 @@ import { useState } from "react";
 import ShopApi from "./Projects/ShopApi";
 import AddTask from "./Projects/AddTask";
 import ZustandCounter from "./Projects/ZustandCounter";
+import TaskManager from "./Projects/TaskLite";
 
 
 function App() {
@@ -85,8 +86,8 @@ function App() {
       <ShopApi></ShopApi>
       <AddTask></AddTask>
       <ZustandCounter></ZustandCounter>
-    */}
-      
+    */} 
+      <TaskManager></TaskManager>
     </div>
   );
 }
