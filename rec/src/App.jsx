@@ -26,8 +26,9 @@ import ShopApi from "./Projects/ShopApi";
 import AddTask from "./Projects/AddTask";
 import ZustandCounter from "./Projects/ZustandCounter";
 import TaskManager from "./Projects/TaskLite";
-
-
+import ExpenseSplitter from "./Redux/ExpenseSplitter";
+import { Provider } from "react-redux";
+import {expense} from "./Redux/ReduxStore/store"
 function App() {
   const Cities = [
     "Chennai",
@@ -86,8 +87,12 @@ function App() {
       <ShopApi></ShopApi>
       <AddTask></AddTask>
       <ZustandCounter></ZustandCounter>
-    */} 
       <TaskManager></TaskManager>
+    */} 
+      
+      <Provider store={expense}>
+      <ExpenseSplitter></ExpenseSplitter>
+      </Provider>
     </div>
   );
 }
