@@ -29,6 +29,8 @@ import TaskManager from "./Projects/TaskLite";
 import ExpenseSplitter from "./Redux/ExpenseSplitter";
 import { Provider } from "react-redux";
 import {expense} from "./Redux/ReduxStore/store"
+import Select from "./InterviewQues/Select";
+import Checkbox from "./InterviewQues/checkbox";
 function App() {
   const Cities = [
     "Chennai",
@@ -88,11 +90,14 @@ function App() {
       <AddTask></AddTask>
       <ZustandCounter></ZustandCounter>
       <TaskManager></TaskManager>
-    */} 
-      
-      <Provider store={expense}>
+
+       <Provider store={expense}>
       <ExpenseSplitter></ExpenseSplitter>
       </Provider>
+    */} 
+      <Select></Select>
+      <Checkbox></Checkbox>
+     
     </div>
   );
 }
