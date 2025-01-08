@@ -31,6 +31,8 @@ import { Provider } from "react-redux";
 import {expense} from "./Redux/ReduxStore/store"
 import Select from "./InterviewQues/Select";
 import Checkbox from "./InterviewQues/checkbox";
+import ContextApi from "./InterviewQues/ContextApi";
+import TrueorFalse from "./InterviewQues/TrueorFalse";
 function App() {
   const Cities = [
     "Chennai",
@@ -94,9 +96,13 @@ function App() {
        <Provider store={expense}>
       <ExpenseSplitter></ExpenseSplitter>
       </Provider>
-    */} 
-      <Select></Select>
+       <Select></Select>
       <Checkbox></Checkbox>
+    */} 
+     
+      <ContextApi>
+        <TrueorFalse></TrueorFalse>
+      </ContextApi>
      
     </div>
   );
