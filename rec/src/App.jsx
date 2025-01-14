@@ -62,7 +62,6 @@ function App() {
   return (
     <div className="p-8">
       <MineSarvs></MineSarvs>
-{/* 
     
       <Todo></Todo>
       <Calculator></Calculator>
@@ -98,7 +97,7 @@ function App() {
       </Provider>
        <Select></Select>
       <Checkbox></Checkbox>
-    */} 
+    
      
       <ContextApi>
         <TrueorFalse></TrueorFalse>
